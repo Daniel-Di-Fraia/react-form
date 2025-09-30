@@ -17,6 +17,7 @@ h1 {
   line-height: 1.1;
   text-align: center;
   padding: 10px 0;
+  color: rgb(147, 36, 181);
 }
 
 ul {
@@ -27,15 +28,30 @@ i {
   color: rgb(108, 22, 134);
   cursor: pointer;
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .btn {
   background-color: rgb(108, 22, 134);
   color: white;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  transition: 0.2s ease;
 }
 
 .btn:hover {
   background-color: blueviolet;
   color: white;
+  transition: 0.2s ease;
+  transform: scale(1.05);
+}
+
+i:hover {
+  transition: 0.2s ease;
+  transform: scale(1.10);
+  color: blueviolet;
+}
+
+li:hover {
+  background-color: rgb(240, 171, 255);
 }

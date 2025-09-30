@@ -10,8 +10,11 @@ function ArticleList() {
     const addArticle = e => {
         e.preventDefault();
 
-        // pulisco il form input per l'user
+        //non permettiamo all'utente di inserire stringhe vuote e preveniamo spazi all inizio e alla fine
         const cleanForm = newArticles.trim();
+        if (!cleanForm) {
+            return;
+        }
 
         // creo un array nuovo per lo state
         const updatedArticles = [...articles, cleanForm];
@@ -33,20 +36,18 @@ function ArticleList() {
         <>  
             {/* creazione del form */}
             <div className="container">
-            <div className="ps-5 d-flex align-items-center">
             <form onSubmit={addArticle}>
                 <input type="text"
                     className="pe-5"
-                    placeholder='Inserisci un nuovo articolo'
+                    placeholder='Inserisci nuovo articolo'
                     value={newArticles}
                     onChange={(e) => { setNewArticles(e.target.value) }}
                 />
-                <button type='submit' className="btn">Inseriscilo!</button>
+                <button type='submit' className="btn">Inserisci un nuovo articolo</button>
             </form>
-            </div>
 
             {/* lista di articoli vecchi e nuovi */}
-            <ul className="list-group ps-5 pt-3">
+            <ul className="list-group pt-3 fs-4">
                 {articles.map((article, index) => (
                     <li className="list-group-item"
                         key={index}>
