@@ -33,31 +33,33 @@ function ArticleList() {
     }
 
     return (
-        <>  
+        <>
             {/* creazione del form */}
             <div className="container">
-            <form onSubmit={addArticle}>
-                <input type="text"
-                    className="pe-5"
-                    placeholder='Inserisci nuovo articolo'
-                    value={newArticles}
-                    onChange={(e) => { setNewArticles(e.target.value) }}
-                />
-                <button type='submit' className="btn">Inserisci un nuovo articolo</button>
-            </form>
+                <div className="d-flex justify-content-center">
+                    <form onSubmit={addArticle}>
+                        <input type="text"
+                            className="pe-5"
+                            placeholder='Inserisci nuovo articolo'
+                            value={newArticles}
+                            onChange={(e) => { setNewArticles(e.target.value) }}
+                        />
+                        <button type='submit' className="btn">Inserisci un nuovo articolo</button>
+                    </form>
+                </div>
 
-            {/* lista di articoli vecchi e nuovi */}
-            <ul className="list-group pt-3 fs-4">
-                {articles.map((article, index) => (
-                    <li className="list-group-item"
-                        key={index}>
-                        {article}
-                        <span onClick={() => removeArticle(index)}>
-                            <i className="fa-solid fa-trash"></i>
-                        </span>
-                    </li>
-                ))}
-            </ul>
+                {/* lista di articoli vecchi e nuovi */}
+                <ul className="list-group pt-3 fs-4">
+                    {articles.map((article, index) => (
+                        <li className="list-group-item"
+                            key={index}>
+                            {article}
+                            <span onClick={() => removeArticle(index)}>
+                                <i className="fa-solid fa-trash float-end"></i>
+                            </span>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </>
     )
