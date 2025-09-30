@@ -6,6 +6,7 @@ function MyMain() {
 
     return (
         <>
+            <h1>Lista Articoli!</h1>
             <ArticleList />
         </>
     )

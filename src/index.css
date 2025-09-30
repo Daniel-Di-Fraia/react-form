@@ -7,14 +7,35 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(241, 196, 241);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  padding: 10px 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
+i {
+  color: rgb(108, 22, 134);
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.btn {
+  background-color: rgb(108, 22, 134);
+  color: white;
+}
+
+.btn:hover {
+  background-color: blueviolet;
+  color: white;
+}
